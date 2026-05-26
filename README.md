@@ -31,65 +31,6 @@ Un proyecto de arte generativo que convierte el movimiento en tiempo real del Me
 | **Línea 6** | 🔴 Rojo | Si (B4) | El Rosario - Villa de Aragón |
 | **Línea 7** | 🔵 Azul | Do Alto (C5) | Campo Marte - Indios Verdes |
 
-## 🚀 Cómo subirlo a GitHub Pages (HOY)
-
-### Paso 1: Crear el repositorio en GitHub
-
-1. Ve a [GitHub.com](https://github.com)
-2. Haz clic en el botón **"+"** arriba a la derecha → **"New repository"**
-3. Configura tu repositorio:
-   - **Repository name:** `metrobus-sonidero` (o el nombre que prefieras)
-   - **Description:** "Música sonidero generativa usando datos en tiempo real del Metrobús CDMX"
-   - Marca **"Public"** (para que funcione GitHub Pages gratis)
-   - ✅ Marca **"Add a README file"**
-   - Click en **"Create repository"**
-
-### Paso 2: Subir los archivos
-
-**Opción A: Desde la interfaz web (la más rápida)**
-
-1. En tu nuevo repositorio, haz clic en **"Add file"** → **"Upload files"**
-2. Arrastra estos 3 archivos:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-3. Escribe un mensaje de commit: "Primera versión del proyecto sonidero"
-4. Click en **"Commit changes"**
-
-**Opción B: Con Git desde la terminal**
-
-```bash
-# 1. Clona tu repositorio
-git clone https://github.com/TU-USUARIO/metrobus-sonidero.git
-cd metrobus-sonidero
-
-# 2. Copia los archivos del proyecto a esta carpeta
-
-# 3. Agrega y sube los archivos
-git add index.html style.css script.js
-git commit -m "Primera versión del proyecto sonidero"
-git push origin main
-```
-
-### Paso 3: Activar GitHub Pages
-
-1. En tu repositorio, ve a **Settings** (Configuración)
-2. En el menú izquierdo, busca **"Pages"**
-3. En **"Build and deployment"**:
-   - **Source:** Selecciona "Deploy from a branch"
-   - **Branch:** Selecciona `main` y carpeta `/ (root)`
-4. Click en **"Save"**
-5. ⏳ Espera 1-2 minutos
-
-### Paso 4: ¡Accede a tu proyecto!
-
-Tu sitio estará disponible en:
-
-```
-https://TU-USUARIO.github.io/metrobus-sonidero/
-```
-
-(Reemplaza `TU-USUARIO` con tu nombre de usuario de GitHub)
 
 ## 🎮 Cómo usar la aplicación
 
@@ -130,48 +71,6 @@ La API de Datos Abiertos CDMX puede tener restricciones CORS o estar temporalmen
 - ✅ **Datos simulados como fallback** para que siempre funcione
 - ✅ **Manejo de errores robusto**
 
-Si quieres usar **solo datos reales**, edita `script.js` y comenta la sección de datos simulados.
-
-## 🎨 Personalización
-
-### Cambiar colores del diseño
-
-Edita `style.css` y modifica las variables de color:
-
-```css
-/* Colores principales */
-#splash-screen {
-    background: linear-gradient(135deg, #1a0033 0%, #000000 50%, #330011 100%);
-}
-
-.neon-title {
-    color: #fff;
-    text-shadow: 0 0 10px #ff00ff; /* Color neón principal */
-}
-```
-
-### Cambiar tempo de la música
-
-En `script.js`, línea ~199:
-
-```javascript
-Tone.Transport.bpm.value = 100; // Cambia este número (60-140)
-```
-
-### Agregar más líneas
-
-Si el Metrobús añade nuevas líneas, edita el objeto `LINEAS_DATA` en `script.js`:
-
-```javascript
-const LINEAS_DATA = {
-    '8': { 
-        color: '#NUEVO_COLOR', 
-        nota: 'D5', 
-        nombre: 'Línea 8',
-        descripcion: 'Ruta nueva'
-    }
-};
-```
 
 ## 🐛 Troubleshooting
 
