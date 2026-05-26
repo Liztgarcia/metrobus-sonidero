@@ -5,8 +5,8 @@
 ![Datos Abiertos](https://img.shields.io/badge/API-Datos%20Abiertos%20CDMX-green?style=for-the-badge)
 
 ## 🎵 ¿Qué es esto?
-
-Un proyecto de arte generativo que convierte el movimiento en tiempo real del Metrobús de la Ciudad de México en **música sonidero**. Cada línea del Metrobús toca una nota musical diferente, y cuando los autobuses se cruzan en las intersecciones, se crea una cumbia única y orgánica.
+La Ciudad de México es música, pasas caminando por el puesto de tacos y suena música, vas en el metro y suena música, estás un viernes en alguna calle del centro histórico y hay música. México es música, México es arte. 
+Este es un proyecto de arte generativo que convierte el movimiento en tiempo real del Metrobús de la Ciudad de México en **música sonidero**. Cada línea del Metrobús toca una nota musical diferente, y cuando los autobuses se cruzan en las intersecciones, se crea una cumbia única y orgánica.
 
 **La ciudad hace música. Literalmente.**
 
