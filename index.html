@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrobús Sonidero - CDMX en Vivo</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Capa de bienvenida -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <h1 class="neon-title">🎺 METROBÚS SONIDERO</h1>
+            <p class="subtitle">La Ciudad de México en música</p>
+            <p class="description">Cada línea de Metrobús toca una nota. Cuando se cruzan, nace la cumbia.</p>
+            <button id="btn-start" class="neon-button">¡DALE! Iniciar</button>
+            <div class="credits">
+                <p>Datos en tiempo real: Portal de Datos Abiertos CDMX</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interfaz principal -->
+    <div id="main-app" style="display: none;">
+        <!-- Panel de control -->
+        <div id="control-panel">
+            <div class="panel-header">
+                <h2>🎺 SONIDERO EN VIVO</h2>
+                <button id="btn-pause" class="control-btn">⏸ Pausar</button>
+            </div>
+            
+            <!-- Estado de conexión -->
+            <div class="status-indicator">
+                <span class="status-dot" id="status-dot"></span>
+                <span id="status-text">Conectando...</span>
+            </div>
+            
+            <!-- Leyenda de líneas -->
+            <div class="legend">
+                <h3>Líneas Activas</h3>
+                <div id="legend-container"></div>
+            </div>
+            
+            <!-- Stats en vivo -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Autobuses activos:</span>
+                    <span class="stat-value" id="buses-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Notas tocadas:</span>
+                    <span class="stat-value" id="notes-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Última actualización:</span>
+                    <span class="stat-value" id="last-update">--:--</span>
+                </div>
+            </div>
+
+            <!-- Visualizador de notas -->
+            <div class="note-visualizer">
+                <h3>Últimas Notas</h3>
+                <div id="note-display"></div>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+
+        <!-- Indicador de carga -->
+        <div id="loading-overlay" style="display: none;">
+            <div class="loader"></div>
+            <p>Cargando datos del Metrobús...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
